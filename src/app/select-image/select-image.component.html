@@ -1,0 +1,11 @@
+<form>
+  <div class="form-group">
+    <label for="selectimageid">Select Image</label>
+    <input type="file" class="form-control-file" id="selectimageid" (change)="onImageSelect($event.target)">
+    <p class="text-danger" *ngIf="isInvalid">File format invalid. Must be of an image type</p>
+
+  </div>
+
+  <img *ngIf="imageSrc" [src]="imageSrc" />
+
+</form>
